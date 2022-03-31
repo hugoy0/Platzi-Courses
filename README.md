@@ -1,2 +1,2 @@
-# platzi-my-store
-Platzi | Angular Course
+# Platzi Courses
+
