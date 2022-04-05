@@ -14,3 +14,17 @@
 <br><input type="text" [value]="person.name">
 <br><progress max="100" [value]="person.age"></progress>
 <br><img width="200" [src]="person.avatar" alt="">
+
+<hr>
+
+<h1>Eventos</h1>
+<button (click)="toggleButton()">ToggleButton</button>
+<button [disabled]="btnDisabled">Enviar</button>
+<p>Edad: {{person.age}}</p>
+<button (click)="increaseAge()">Aumentar Edad</button>
+<div class="box" (scroll)="onScroll($event)">
+    <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae facere cupiditate alias dolor similique nostrum repellat atque obcaecati, quas quis corrupti doloribus laudantium aliquam dignissimos laboriosam sint beatae, qui quam?</span><span>Qui minima aliquid ullam repellat quibusdam modi voluptate praesentium odio enim iste sunt hic cumque, expedita placeat reiciendis, suscipit labore. Aperiam ad in necessitatibus aspernatur, similique adipisci exercitationem hic provident!</span></p>
+</div>
+<br>
+<input type="text" (keyup)="captureData($event)" [value]="person.name">
+<p> {{person.name}} {{person.name.length}} </p>
