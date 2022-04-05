@@ -5,4 +5,12 @@
 
 <h3> Hola, soy {{name}} y tengo {{age}} años </h3>
 
-<img src="{{img}}" alt="image">
+<img width="300" src="{{img}}" alt="image">
+
+<hr>
+
+<h1>Propiedades</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<br><input type="text" [value]="person.name">
+<br><progress max="100" [value]="person.age"></progress>
+<br><img width="200" [src]="person.avatar" alt="">
