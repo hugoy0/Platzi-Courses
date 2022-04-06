@@ -37,3 +37,18 @@
 <p>Valid: {{ nameInput.valid }} </p>
 <p>Age: {{person.age}} | Is valid: {{ageInput.valid}} </p>
 <input type="number" max="35" min="18" #ageInput="ngModel" [(ngModel)]="person.age">
+
+<hr>
+
+<h1>ngIf</h1>
+<input type="text" #nameInput2="ngModel" [(ngModel)]="person.name" required>
+<input type="number" max="35" min="18" #ageInput2="ngModel" [(ngModel)]="person.age">
+<!-- <p *ngIf="person.name == 'Hugo'">Soy {{person.name}}</p>
+<p *ngIf="person.name != 'Hugo'">No soy Hugo, soy {{person.name}}</p> -->
+
+<p *ngIf="person.name == 'Hugo' && person.age == 30 else myBlock">Sí, soy {{person.name}}</p>
+
+<ng-template #myBlock>
+    <p>No soy la persona que estás buscando</p>
+</ng-template>
+
