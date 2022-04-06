@@ -28,3 +28,12 @@
 <br>
 <input type="text" (keyup)="captureData($event)" [value]="person.name">
 <p> {{person.name}} {{person.name.length}} </p>
+
+<hr>
+
+<h1>NgModel</h1>
+<p>Nombre {{ person.name }}</p>
+<input type="text" #nameInput="ngModel" [(ngModel)]="person.name" required>
+<p>Valid: {{ nameInput.valid }} </p>
+<p>Age: {{person.age}} | Is valid: {{ageInput.valid}} </p>
+<input type="number" max="35" min="18" #ageInput="ngModel" [(ngModel)]="person.age">
